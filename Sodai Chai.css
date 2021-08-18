@@ -1,0 +1,878 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    max-width: 100%;
+    margin: auto;
+    width: 100%;
+    font-family: sans-serif;
+}
+.clearfix::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+
+/* ...........................main_menu_part............................. */
+.logo_div{
+    width: 300px;
+    height: 180px;
+    position: relative;
+    top: -25px;
+    right: 0;
+}
+.logo_div img {
+    max-width: 100%;
+    height: 100%;
+}
+.logo_div a{
+    display: inline-block;
+}
+.search {
+	width: 100%;
+	height: 100%;
+	border-radius: 8px;
+	background-color: #dcdde1;
+	border: 2px solid rgb(255, 0, 0);
+	box-shadow: 1px 1px 1px 1px rgb(209 202 202);
+	padding-left: 20px;
+	cursor: text;
+	outline: none;
+	position: relative;
+}
+.search_div {
+	width: 60%;
+	height: 40px;
+	position: relative;
+	top: -103px;
+	left: 35%;
+}
+.search_btn {
+	background-color: rgb(255, 0, 0);
+	color: white;
+	font-size: 25px;
+	padding: 1px 26px;
+	display: inline-block;
+	border-radius: 0px 7px 7px 0px;
+	border: none;
+	outline: none;
+	position: absolute;
+	top: 0;
+	right: 0;
+	transition: .4s;
+	z-index: 1;
+	overflow: hidden;
+}
+.search_btn::before{
+    content: "";
+    height: 100%;
+    width: 0%;
+    background-color: rgb(112, 30, 30);
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: -1;
+    outline: none;
+    transition: .5s;
+}
+.search_btn:hover::before{
+    width: 100%;
+}
+
+.main_menu_fulldiv {
+    display: inline-block;
+    text-align: center;
+    position: fixed;
+    background-color: #fff;
+    width: 100%;
+    height: 130px;
+    z-index: 2;
+}
+
+.menu_ul {
+    background-color: #042716;
+    top: -90px;
+    position: relative;
+    z-index: 1;
+}
+.menu_ul::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #e84118;
+    z-index: -1;
+    transition: .5s;
+    height: 0%;
+    width: 0%;
+}
+
+.menu_ul::after{
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    background-color: #e84118;
+    z-index: -1;
+    transition: .5s;
+    height: 0%;
+    width: 0%;
+}
+.menu_ul:hover::before{
+    width: 100%;
+    height: 50%;
+}
+.menu_ul:hover::after{
+    height: 50%;
+    width: 100%;
+}
+.menu_ul li {
+    display: inline-block;
+    margin-left: -4px;
+    position: relative;
+}
+.menu_ul li a {
+    
+    display: inline-block;
+    padding: 9px 30px;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-size: 22.1px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    z-index: 1;
+    position: relative;
+    transition: .5s;
+}
+.menu_ul li a::before{
+    content: "";
+    height: 100%;
+    background-color:#fff;
+    color: #042716;
+    width: 0%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: .7s;
+    z-index: -1;  
+}
+.menu_ul li a:hover::before{
+    width: 100%;
+}
+.menu_ul li:hover >a {
+    color: #042716;
+    background-color: white;
+}
+.khali {
+	width: 100%;
+	height: 150px;
+}
+/* .................drop_down_part................... */
+
+.Contact {
+    position: absolute;
+    width: 168px;
+    background-color: #042716;
+    top: 95%;
+    left: 0;
+    padding-left: 0;
+    visibility: hidden;
+    opacity: 0;
+    transition: .5s;
+    transform: scaleY(0);
+    transform-origin: top center;
+    margin-top: 3px;
+    
+}
+.Contact li{
+    display: block;
+    margin-left: 0;
+   border-top: 1px solid black;
+} 
+.Contact li a{
+    display: block;
+    border-bottom: 1px solid rgb(169, 169, 169);
+    font-size: 17px;
+}
+
+.news_event {
+    position: absolute;
+    width: 220px;
+    background-color: #042716;
+    color: white;
+    top: 100%;
+    left: 0;
+    padding-left: 0;
+    visibility: hidden;
+    opacity: 0;
+    transition: .5s;
+    transform: scaleY(0);
+    transform-origin: top center;
+    
+}
+
+.news_event li{
+    display: block;
+    margin-left: 0;
+   border-top: 1px solid black;
+} 
+
+.news_event li a{
+    display: block;
+    border-bottom: 1px solid rgb(169, 169, 169);
+    font-size: 15px;
+}
+.about {
+    position: absolute;
+    width: 203px;
+    background-color: #042716;
+    color: white;
+    top: 100%;
+    left: 0;
+    padding-left: 0;
+    visibility: hidden;
+    opacity: 0;
+    transition: .5s;
+    transform: scaleY(0);
+    transform-origin: top center;
+}
+.about li{
+    display: block;
+    margin-left: 0;
+   border-top: 1px solid black;
+}
+.about li a{
+    display: block;
+    border-bottom: 1px solid rgb(169, 169, 169);
+    font-size: 15px;
+}
+/* ....................dorp_down_hover_part.....................*/
+
+.menu_ul li:hover .Contact{
+    visibility: visible;
+    opacity: 1;
+    transform: scaleY(1);
+    
+}
+.menu_ul li:hover .news_event{
+    visibility: visible;
+    opacity: 1;
+    transform: scaleY(1);
+    
+}
+.menu_ul li:hover .about{
+    visibility: visible;
+    opacity: 1;
+    transform: scaleY(1);
+    
+}
+
+
+/* ..................banner_part.................... */
+.full_track{
+    background: url(https://i.ibb.co/tHpvG79/track-Recovered.png) no-repeat;
+    width: 250px;
+    position: absolute;
+    top: 0px;
+    right: 100%;
+    margin-top: 34px;
+    animation-name: fulltrack;
+    animation-duration: 6s;
+    animation-timing-function: ease-in;
+    animation-delay: 1s;
+    animation-iteration-count: infinite;
+    /* animation-direction: alternate; */
+    animation-fill-mode: forwards;
+    height: 200px;
+    background-size: 250px;
+    /* transition: 5s; */
+}
+@keyframes fulltrack{
+    0%{
+        right: -30%;
+        top: 0;
+        
+    }
+    100%{
+        right: 100%;
+        top: 0;
+        
+    }
+}
+.grecory {
+	margin: auto;
+	background-image: url(https://i.ibb.co/0rmc0w0/sod.png);
+	color: #000707;
+	padding-top: 31%;
+    background-size: cover;
+    font-family: 'Shadows Into Light', cursive;
+    font-weight: bold;
+    height: 400px;
+    width: 100%;
+    position: relative;
+    
+    
+}
+.inner_text h2{
+    font-size: 40px;
+    position: relative;
+    top: 190px;
+    /* left: 2%; */
+    background-color: #222f3ebd;
+    color: rgb(255, 255, 255);
+    position: relative;
+    z-index: 1;
+    /* transform: skewY(0) */
+}
+.inner_text h2::after{
+    content: "";
+    height: 0%;
+    background-color:#353b48;
+    color: #ffffff;
+    width: 0%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: .5s;
+    z-index: -1;  
+    /* transform: skewY(0); */
+}
+.inner_text h2::before{
+    content: "";
+    height: 0%;
+    background-color:#000000;
+    color: #ffffff;
+    width: 0%;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    transition: .5s;
+    z-index: -1;  
+}
+.inner_text h2:hover::after{
+  height: 50%;
+  width: 100%;
+  transform: skewY(1);
+}
+.inner_text h2:hover::before{
+    height: 50%;
+    width: 100%;
+    transform: skewY(1);
+}
+.inner_text {
+	font-size: 100px;
+	letter-spacing: 5px;
+    /* cursor: progress; */
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 450px;
+    width: 100%;
+    text-align: center;
+    background-color: #ffffff00;
+    /* visibility: hidden; */
+    transition: 0.5s;
+    /* opacity: 0; */
+    /* transform: scaleX(0); */
+    font-weight: bold;
+}
+.grecory:hover .inner_text{
+    /* visibility: visible; */
+    /* opacity: 1; */
+    /* transform: scaleX(1); */
+}
+/* ...................our_catagories_part................. */
+
+.Product-Head {
+	border: none;
+	text-align: center;
+	background-color: rgb(255, 0, 0);
+	color: rgb(255, 255, 255);
+	display: block;
+	margin-top: -12.5%;
+    font-family: orbitron;
+    padding: 10px 0px;
+    font-size: 30px;
+    letter-spacing: 8px;
+    position: relative;
+    z-index: 1;
+}
+.Product-Head::before{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-color: rgb(48, 22, 22);
+    z-index: -1;
+    height: 0%;
+    width: 100%;
+    transition: .5s;
+}
+.Product-Head:hover::before{
+    height: 50%;
+    
+}
+.Product-Head::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: rgb(48, 22, 22);
+    z-index: -1;
+    height: 0%;
+    width: 100%;
+    transition: .5s;
+}
+.Product-Head:hover::after{
+    height: 50%;
+}
+
+/* ............................product_mainlist_par................. */
+.product_list{
+    text-align: center;
+    margin: 10px;
+}
+.item-list{
+    text-align:center;
+
+}
+.fruits  {
+   text-align: center;
+   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+   border: 1px solid rgb(116, 115, 115);
+   box-shadow: 0px 0px 1px 2px #aaaaaa;
+   display: inline-block;
+   padding: 10px 62px;
+   font-size: 22px;
+   color: rgb(0, 0, 0);
+   margin: 1px;
+   text-decoration: none;
+
+}
+.meet{
+   text-align: center;
+   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+   border: 1px solid rgb(116, 115, 115);
+   box-shadow: 0px 0px 1px 2px #aaaaaa;
+   display: inline-block;
+   padding: 10px 90px;
+   font-size: 22px;
+   color: rgb(0, 0, 0);
+   margin: 1px;
+   text-decoration: none;
+}
+.cook{
+     text-align: center;
+     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+     display: inline-block;
+     border: 1px solid rgb(116, 115, 115);
+     box-shadow: 0px 0px 1px 2px #aaaaaa;
+     padding: 10px 120px;
+     font-size: 22px;
+     color: rgb(0, 0, 0);
+     margin: 1px;
+     text-decoration: none;
+}
+.beverage{
+     text-align: center;
+     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+     border: 1px solid rgb(116, 115, 115);
+     box-shadow: 0px 0px 1px 2px #aaaaaa;
+     display: inline-block;
+     padding: 10px 111.2px;
+     font-size: 22px;
+     color: rgb(0, 0, 0);
+     margin: 1px;
+     text-decoration: none;
+}
+.h-and-c{
+     text-align: center;
+     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+     border: 1px solid rgb(116, 115, 115);
+     box-shadow: 0px 0px 1px 2px #aaaaaa;
+     display: inline-block;
+     padding: 10px 61px;
+     font-size: 22px;
+     color: rgb(0, 0, 0);
+     margin: 1px;
+     text-decoration: none;
+
+}
+.pest{
+    text-align: center;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    border: 1px solid rgb(116, 115, 115);
+    box-shadow: 0px 0px 1px 2px #aaaaaa;
+    display: inline-block;
+    padding: 10px 98.5px;
+    font-size: 22px;
+    color: rgb(0, 0, 0);
+    margin: 1px;
+    margin-left: 1px;
+    text-decoration: none;
+}
+.office{
+     text-align: center;
+     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+     border: 1px solid rgb(116, 115, 115);
+     box-shadow: 0px 0px 1px 2px #aaaaaa;
+     display: inline-block;
+     padding: 10px 89.9px;
+     font-size: 22px;
+     color: rgb(0, 0, 0);
+     margin: 1px;
+     text-decoration: none;
+     margin-left: 2px;
+}
+.beauty{
+    text-align: center;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    border: 1px solid rgb(116, 115, 115);
+    box-shadow: 0px 0px 1px 2px #aaaaaa;
+    display: inline-block;
+    padding: 10px 88.9px;
+    font-size: 22px;
+    color: rgb(0, 0, 0);
+    margin: 1px;
+    text-decoration: none;
+}
+.health{
+     text-align: center;
+     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+     border: 1px solid rgb(116, 115, 115);
+     box-shadow: 0px 0px 1px 2px #aaaaaa;
+     display: inline-block;
+     padding: 10px 84px;
+     font-size: 22px;
+     color: rgb(0, 0, 0);
+     margin: 1px;
+     text-decoration: none;
+}
+.baby-care{
+     text-align: center;
+     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+     border: 1px solid rgb(116, 115, 115);
+     box-shadow: 0px 0px 1px 2px #aaaaaa;
+     display: inline-block;
+     padding: 10px 113.9px;
+     font-size: 22px;
+     color: rgb(0, 0, 0);
+     margin: 1px;
+     text-decoration: none;
+}
+.h-a{
+   text-align: center;
+   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+   border: 1px solid rgb(116, 115, 115);
+   box-shadow: 0px 0px 1px 2px #aaaaaa;
+   display: inline-block;
+   padding: 10px 80px;
+   font-size: 22px;
+   color: rgb(0, 0, 0);
+   margin: 1px;
+   text-decoration: none;
+}
+.resturent{
+    text-align: center;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    border: 1px solid rgb(116, 115, 115);
+    box-shadow: 0px 0px 1px 2px #aaaaaa;
+    display: inline-block;
+    padding: 10px 112px;
+    font-size: 22px;
+    color: rgb(0, 0, 0);
+    margin: 1px;
+    text-decoration: none;
+}
+/* ............................product_mainlist_hover_part................. */
+
+.resturent:hover{
+    background-color: rgb(253, 110, 0);
+    transition: 0.5s;
+    color: white;
+}
+.pet-care:hover{
+    background-color: rgb(253, 110, 0);
+    transition: 0.5s;
+    color: white;
+}
+.baby-care:hover{
+    background-color: rgb(253, 110, 0);
+    transition: 0.5s;
+    color: white;
+}
+.beauty:hover{
+    background-color: rgb(253, 110, 0);
+    transition: 0.5s;
+    color: white;
+}
+.beverage:hover{
+    background-color: rgb(253, 110, 0);
+    transition: 0.5s;
+    color: white;
+}
+.cook:hover{
+    background-color: rgb(253, 110, 0);
+    transition: 0.5s;
+    color: white;
+}
+.fruits:hover{
+    background-color: rgb(253, 110, 0);
+    transition: 0.5s;
+    color: white;
+}
+.health:hover{
+    background-color: rgb(253, 110, 0);
+    transition: 0.5s;
+    color: white;
+}
+.meet:hover{
+    background-color: rgb(253, 110, 0);
+    transition: 0.5s;
+    color: white;
+}
+.office:hover{
+    background-color: rgb(253, 110, 0);
+    transition: 0.5s;
+    color: white;
+}
+.h-and-c:hover{
+    background-color: rgb(253, 110, 0);
+    transition: 0.5s;
+    color: white;
+}
+.pest:hover{
+    background-color: rgb(253, 110, 0);
+    transition: 0.5s;
+    color: white;
+}
+.h-a:hover{
+    background-color: rgb(253, 110, 0);
+    transition: 0.5s;
+    color: white;
+}
+/* .....................order_proces_part........................ */
+
+.order-proces{
+    text-align: center;
+}
+.how{
+    text-align: center;
+    display: block;
+    margin-bottom: 2%;
+    cursor: help;
+    color: black;
+    box-shadow: 1px 1px 1px 1px grey;
+}
+.how span{
+    color: crimson;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.place-order{
+    max-width: 30%;
+    font-size: 18px;
+    text-align: center;
+    display: inline-block;
+    margin-left: 20px;
+    box-shadow: 1px 1px 1px 1px grey;
+    position: relative;
+    transition: .5s;
+    /* background-color: #00cec9; */
+    /*  */
+}
+.cart{
+    font-size: 35px;
+    z-index: 2;
+    padding-top: 8px;
+}
+.jhuri{
+    max-width: 100%;
+    right: -50%;
+    top: 0px;
+    font-size: 15px;
+    /* padding-top: 10px; */
+    position: absolute;
+    animation-name: jhuri;
+    animation-duration: 2s;
+    animation-timing-function: ease-out;
+    animation-delay: 1s;
+    animation-iteration-count: infinite;
+    /* animation-direction: alternate; */
+    animation-fill-mode: forwards;
+    transform: rotate(20deg);
+    z-index: 1;
+}
+@keyframes jhuri{
+    0%{
+        left: 0%;
+        top: 0%;
+        color: rgb(0, 0, 0);
+    }
+    100%{
+        left: 0%;
+        top: 10%;
+        color: rgb(0, 0, 0);
+        text-align: center;
+    }
+ }
+.pay{
+    max-width: 30%;
+    font-size: 18px;
+    text-align: center;
+    display: inline-block;
+    margin-left: 20px;
+    box-shadow: 1px 1px 1px 1px grey;
+    position: relative;
+    transition: .5s;
+}
+.hand{
+    font-size: 50px;
+    display: inline-block;
+    position: relative;
+    /* top: 9px; */
+    padding-top: 10px;
+}
+.dollar {
+    max-width: 100%;
+    right: -50%;
+    top: 0px;
+    font-size: 20px;
+    /* padding-top: 10px; */
+    position: absolute;
+    animation-name: dollar;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+    animation-delay: 1s;
+    animation-iteration-count: infinite;
+    /* animation-direction: alternate; */
+    animation-fill-mode: forwards;
+    transform: rotate(20deg);
+}
+@keyframes dollar{
+    0%{
+        left: 0%;
+        top: 15%;
+        color: rgb(0, 0, 0);
+    }
+    100%{
+        left: 0%;
+        top: 0%;
+        color: rgb(0, 0, 0);
+        text-align: center;
+    }
+}
+.dollar:hover{
+    animation-play-state: paused
+}
+
+.factory{
+    display: inline-block;
+    font-size: 40px;
+    position: relative;
+    left: -44%;
+}
+.track{
+    max-width: 30%;
+    font-size: 18px;
+    text-align: center;
+    display: inline-block;
+    margin-left: 20px;
+    box-shadow: 1px 1px 1px 1px grey;
+    position: relative;
+    transition: .5s;
+    
+}
+
+.i_t{
+    max-width: 100%;
+    font-size: 35px;
+    padding-top: 10px;
+    position: absolute;
+    animation-name: track;
+    animation-duration: 2s;
+    animation-timing-function: ease;
+    animation-delay: 1s;
+    animation-iteration-count: infinite;
+    /* animation-direction: alternate; */
+    animation-fill-mode: forwards;
+}
+
+@keyframes track{
+    0%{
+        left: 0px;
+        top: 0;
+        color: green;
+    }
+    100%{
+        left: 89%;
+        top: 0;
+        color: red;
+    }
+}
+.i_t:hover{
+    animation-play-state: paused
+}
+/* ...................why_love_sodaichai_part...................... */
+
+.why_love_sodaichai_maindiv{
+    text-align: center;
+    display: inline-block;
+    padding-bottom: 20px;
+}
+.why_love_sodaichai_maindiv h1{
+    box-shadow: 1px 1px 1px 1px grey;
+    margin-bottom: -20px;
+}
+
+.quick{
+    display: inline-block;
+    width: 30%;
+    box-shadow: 1px 1px 1px 1px grey;
+    
+}
+.pick{
+    display: inline-block;
+    width: 30%;
+    box-shadow: 1px 1px 1px 1px grey;
+}
+.range_product{
+    display: inline-block;
+    width: 30%;
+    box-shadow: 1px 1px 1px 1px grey;
+
+}
+
+/* ...........................footer_part.......................... */
+
+footer{
+    text-align: center;
+    font-size: 20px;
+    background-color: rgb(192, 188, 188);
+    color: rgb(0, 0, 0);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    cursor: default;
+}
+
+.foter-div {
+    max-width: 100%;
+    margin: auto;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align: center;
+}
+.footer-2{
+    background-color: rgb(255, 255, 255);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 27px;
+    text-align: center;
+    box-shadow: 0px 0px 1px 0px grey;
+}
+.p_com{
+    font-size: 25px;
+    color: rgb(8, 7, 9);
+    text-decoration: none;
+    
+}
+.footer_com:hover{
+    color: rgb(104, 4, 4);
+}
