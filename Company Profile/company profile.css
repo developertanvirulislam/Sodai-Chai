@@ -1,0 +1,22 @@
+.overview_p{
+    width: 60%;
+}
+.overview{
+    width: 100%;
+    display: inline-flex;
+}
+.overview_contact{
+    width: 40%;
+    height: 300px;
+    background-color: rgb(204, 204, 204);
+    
+}
+.overview_contact p{
+    text-align: left;
+}
+.overview_contact h3{
+    text-align: center;
+}
+.overview_contact::after{
+    content: "";
+}
